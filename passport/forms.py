@@ -20,4 +20,3 @@ class CountryForm(forms.ModelForm):
             'Passport_types': forms.SelectMultiple(attrs={'class': 'form-select'}),
             'image': forms.URLInput(attrs={'class': 'form-control'}),
         }
-

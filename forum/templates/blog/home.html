@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forum Home</title>
+</head>
+
+<body style="background-color:#74d5b4;">
+{% include 'partials/navbar.html' %}
+
+    <h1>Forum Home</h1>
+    <a href="{% url 'post_new' %}">New Post</a>
+
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{% url 'post_detail' post.id%}">{{ post.title }}</a>
+                <p>{{ post.date_posted }}</p>
+                <a href="{% url 'post_edit' post.id %}">Edit</a>
+                <a href="{% url 'post_delete' post.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
