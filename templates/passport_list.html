@@ -25,7 +25,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gx-4 gy-5 justify-content-center">
     {% for passport in passports %}
       <div class="col text-center">
-        <div class="card border-primary shadow-sm mx-auto">
+        <div class="card shadow-sm mx-auto">
           <img src="{{ passport.image }}" class="card-img-top" alt="{{ passport.name }}">
           <div class="card-body">
             <div class="card-content" id="content{{ forloop.counter }}">

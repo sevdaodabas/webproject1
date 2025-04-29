@@ -16,7 +16,7 @@ def post_detail(request, id):
             new_comment.post = post
             new_comment.save()
             return redirect('post_detail', id=post.id)
-
+        return None
     else:
         comment_form = CommentForm()
         return render(request, 'blog/post_detail.html', {'post': post, "comments": comments, "comment_form": comment_form})
